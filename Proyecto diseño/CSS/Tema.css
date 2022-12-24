@@ -1,0 +1,85 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+    /*color de fondo*/
+	
+    background-color: rgba(28,30,33,1.00);
+    /*color de la letra*/
+    color: rgba(200,200,200,1.00);
+}
+header{
+    background-color: rgba(36,37,38,1.00);
+    box-shadow: 0px 0px 5px 0.1px black;
+
+
+
+}
+
+.titulo , .Titulo-de-pagina{
+    color: #1D8348;
+    /*este es el color verde*/
+}
+
+
+
+/*Aplicar Etilo a cajas de contenido*/
+.div-login-registro,.selector,.btn_tomar, .div-cuerpo-tareas-tutorias  ,.caja_Default ,.popup-tareas-agregar , .bnt-agregar , .contenedor,.popup-Profes-agregar ,.btnRegresar , .btnRegresarRegistro , .btnInfo ,.btnEliminarProfe ,.div-admin-registro,.cajaContenido{
+    /*color del fondo de las cajas de formulario*/
+    background-color: rgba(36,37,38,1.00);
+    /*sombra de las cajas por ejemplo la caja redondeada de los formularios de registro de secion*/
+    box-shadow: 0px 0px 10px 0.1px rgba(0,0,0,1.00);
+}
+
+
+
+.btn_tomar{
+    color: white;
+}
+
+
+.separador {
+    /*color de la lineas <hr>*/
+    border-color: black;
+}
+
+.btn-iniciar-registrar, .btn-incribir {
+    /*color del fondo de botones verdes*/
+    background-color:#1d8348;
+    /*color de la letra*/
+    color: white;
+
+}
+
+.btn-cuenta-nueva {
+    /*color de la letra*/
+    color: white;
+    /*color verde claro de los bonones de index */
+    background-color: limegreen;
+}
+
+.input{
+    /*fondo de los inputs*/
+    background-color: rgba(36,37,38,1.00);
+    color: white;
+    border-color: black;
+
+}
+
+/*----------------
+Hasta aqui pag inicio y registro
+------------------*/
+.btn-color-verde{
+    background-color:#1d8348; 
+} 
+.btn-color-rojo{
+    background-color: red;
+}
+
+.overlay{
+    background: rgba(3,3,3,0.6);
+}
+.btnTema {
+    background-image: url("../Media/IMG/sol.png");
+    background-repeat: no-repeat;
+    background-position:center;
+}

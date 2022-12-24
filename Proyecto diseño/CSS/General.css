@@ -1,0 +1,866 @@
+@font-face {
+  font-family: 'Helvetica';
+  src: url('"../Fonts/helvetica-bold.otf"') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+
+* {
+    margin:0;
+    padding:0;
+    font-family: 'Work Sans', sans-serif;
+
+}
+
+html{
+    height: 100%;
+
+}
+body{
+    height: 100%
+}
+
+.Titulo-de-pagina {
+    width: 50%;
+    font-family: 'Concert One', cursive;
+    font-size: 40px;
+}
+.input-validaciones{}
+
+.input-validaciones:invalid:required{
+    border-color: red;
+}
+
+.input-validaciones:valid{
+    border-color: lime;
+}
+
+.caja-padre{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.caja-padre-inicio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+    height:90%
+}
+
+.caja-padre-admin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+    height:79.5%;
+}
+
+
+
+
+
+.prueba {
+    background: red;
+}
+
+.prueba2 {
+    background: blue;
+}
+
+.titulo {
+    font-size: 40px;
+    font-family: 'Concert One', cursive;
+}
+.div-cuerpo-tareas-tutorias .titulo{
+    font-size: 30px;
+}
+
+.Eslogan{
+    font-size: 15px;
+    font-weight: 200;
+}
+
+.div-login-registro {
+    margin-right: 4%;
+    margin-left: 4%;
+    padding: 15px;
+    border-radius: 15px;
+    height: 300px;
+    width: 350px;
+
+}
+
+.form-login-registro{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+.input{
+    margin-bottom: 15px;
+    border: 1px solid; 
+    text-align: center;
+    border-radius: 7px;
+    outline: none;
+}
+
+
+.separador{
+    margin:0px 5px 15px 5px;
+    border:solid 0.5px;
+}
+.btn-iniciar-registrar{
+    border-radius: 7px;
+    height: 55px;
+    border: none;
+    width: 100%;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+.btn-cuenta-nueva{
+    border-radius: 7px;
+    height: 30px;
+    border: none;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 15px;
+
+}
+.btn_tomar{
+    height: 40px;
+    width: 60px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border:none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-size: 30px 30px;
+    font-weight: 500;
+}
+.Genesis-tilte {
+    font-family: "Helvetica";
+    font-size: 20px;
+	font-style: ;
+
+}
+.foter {
+    display: flex;
+    width: 100%;
+    height: 10%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+/*--------------------------
+fin del pag iicio y registro
+----------------------------*/
+
+.div-cuerpo-tareas-tutorias {
+    margin: 25px auto 25px auto;
+    width: 85%;
+    min-height: 70%;
+    display: flex;
+    border-radius: 15px;
+    padding: 25px;
+    flex-direction: column;
+}
+.barra-lateral-flotante{
+    position: fixed;
+    top: 25%;
+    left: 0.5%;
+    border-radius: 15px;
+}
+.selector{
+    margin-bottom: 15px;
+    border: 1px solid; 
+    border-radius: 7px;
+    overflow: hidden;
+    text-align: left;
+    height: 50px;
+    border:none;
+}
+.selector_btn{
+    background-color: transparent;
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border:none;
+    vertical-align: middle;
+
+}
+#todos_img{
+    background-image: url("../Media/IMG/todos.png");
+}
+#abiertos_img{
+    background-image: url("../Media/IMG/abiertos.png");
+
+}
+#proceso_img{
+    background-image: url("../Media/IMG/proceso.png");
+}
+#mantenimiento_img{
+    background-image: url("../Media/IMG/mantenimiento.png");
+}
+#resueltos_img{
+    background-image: url("../Media/IMG/resueltos.png");
+}
+.selector_inicial{
+    width: 50px;
+}
+.selector_final{
+    width: 185px;
+}
+.selector_animacion{
+    animation-name: selector;
+    animation-duration: 500ms;
+    animation-direction: alternate;
+}
+.selector_animacion2{
+    animation-name: selector2;
+    animation-duration: 500ms;
+    animation-direction: alternate;
+}
+@keyframes selector{
+    from{
+        width: 50px;
+    }
+    to{
+        width: 185px;
+    }
+}
+@keyframes selector2{
+    from{
+        width: 185px;
+    }
+    to{
+        width: 50px;
+    }
+}
+
+
+.caja_Default{
+    margin: 25px auto 25px auto;
+    width: 85%;
+
+    display: flex;
+    border-radius: 15px;
+    padding: 25px;
+    flex-direction: column;
+}
+
+.margen{
+    margin-top: 100px;
+}
+.tutorias-tareas-vacias {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+    font-family: "Work Sans", sans-s erif;
+
+}
+
+.grid-tabla {
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+}
+
+.grid-tabla .descripcion {
+    display: flex;
+    flex-direction: column;
+    padding-left: 5px;
+}
+
+.grid-tabla .iconos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-tabla .fechas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.grid-tabla .fechas .fin {
+
+}
+.grid-tabla .descripcion .creado {
+    font-weight: 300;
+    font-size: 14px;
+}
+#Descripcion{
+    font-weight: 260;
+    font-size: 15px;
+}
+
+.expiradoRojo{
+    color:red;
+}
+
+.Prioridad-alta{
+    color: red;
+}
+
+.Prioridad-media{
+    color: yellow;
+}
+.Prioridad-baja{
+    color: #1D8348;                
+}
+
+.grid-tabla .fechas .vencimiento {
+    font-weight: 260;
+    font-size: 14px;
+}
+
+.iconos input {
+    border: none;
+    background-color: transparent;
+    background-repeat: no-repeat;
+}
+
+.iconos .completar{
+    width: 20px;
+    height: 20px;
+    background-image: url("../Media/IMG/Completar.png");
+    cursor: pointer;
+}
+
+.iconos .borrar{
+    width: 20px;
+    height: 20px;
+    background-image: url("../Media/IMG/Eliminar.png");
+    cursor: pointer;
+}
+
+.iconos img{
+    cursor: pointer;
+}
+/*popups*/
+.overlay{
+
+    /*background-color: rgba(0,0,0,.3); se remplaza el color en cada tema*/
+    position: fixed;
+    top : 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.overlay.active {
+    visibility: visible;
+}
+.overlay.oculto {
+    visibility: hidden;
+}
+
+.popup-tareas-agregar {
+
+    padding: 25px;
+    border-radius: 15px;
+    display:flex ;
+    flex-direction: column;
+    min-width: 500px;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+
+.form-tareas-agregar {
+    display: flex;
+    flex-direction: column;
+    border: none;
+
+}
+
+.form-tareas-agregar input,textarea,select{
+    margin-bottom: 15px;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+.form-tareas-agregar input{
+    overflow: hidden;
+}
+
+.btn-tarea {
+    width: 80px;
+    margin: 0px 10px;
+    color: white;
+}
+
+.btn-color-verde , .btn-color-rojo{
+    cursor: pointer;
+    border:none;
+
+}
+
+.cerrar-popups {
+    background-color: red;
+    position:relative;
+    top: 50px;
+    right: 0px;
+    width: 20px;
+    height: 20px;
+}
+.bnt-agregar {
+    width: 50px;
+    height: 50px;
+    background-image: url("../Media/IMG/agregar_icono.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    border:none;
+    position: fixed;
+    right: 5px;
+    bottom:45%;
+    border-radius: 25px;
+    cursor: pointer;
+
+}
+
+.informacion {
+    font-family: 'Concert One', cursive;
+    font-size: 20px;
+
+}
+
+.grid {
+    display: inline-grid;
+    grid-template-columns: 30% 60%;
+
+}
+.grid .datos{
+    text-align: left;
+}
+
+.contenedor {
+    padding: 15px;
+    border-radius: 15px;
+}
+.max-widht600 {
+    max-width: 600px;
+}
+
+
+.fecha {
+    display: flex;
+    width: 100%;
+}
+
+.flecha {
+    width: 20px;
+    margin: 0 10%;
+    font-family: 'Concert One', cursive;
+    font-size: 30px;
+    color: #1D8348;
+    cursor: pointer;
+
+}
+.div-cuerpo-agenda{
+    margin:auto;
+    width: 85%;
+    min-height: 70%;
+    box-shadow: 0px 0px 10px 0.1px rgba(200,200,200,1.00);
+    background-color:white;
+    border-radius: 15px;
+    padding: 25px;
+}
+.meses {
+    font-family: 'Concert One', cursive;
+    font-size: 25px;
+    margin: auto;
+
+}
+
+.fecha-year {
+    margin: 0 auto;
+    display: flex;
+    width: 200px;
+}
+
+.flecha-year {
+    width: 20px;
+    margin: 0 10%;
+    font-family: 'Concert One', cursive;
+    font-size: 20px;
+    color: #1D8348;
+    cursor: pointer;
+}
+
+.meses-year {
+    margin: auto;
+    font-family: 'Concert One', cursive;
+    font-size: 20px;
+}
+
+.mesActual {
+    font-family: 'Concert One', cursive;
+    font-size: 30px;
+    display: inline-block;
+}
+
+.yearActual {
+    font-family: 'Concert One', cursive;
+    font-size: 25px;
+    display: inline-block;
+}
+
+
+.color-gris{
+    color: gray;
+
+}
+
+.week{
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(7,auto);     
+    width: 100%;
+}
+
+
+
+.contenedorProfe {
+}
+
+.contenedorProfe .dias {
+    display: grid;
+    grid-template-columns:repeat(7,auto);
+    vertical-align: middle;
+}
+
+.btn-inscribir {
+    border-radius: 5px;
+    border: none;
+    width: 160px;
+    height: 25px;
+    margin-bottom:5px;
+    font-weight: 500;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 5px;
+}
+
+.hora {
+    font-weight: 250;
+    font-size: 14px;
+
+}
+
+.diaContenedor {
+    text-align: center;
+}
+
+.diaContenedorHorario {
+
+}
+
+.popup-Profes-agregar {
+    padding: 25px;
+    border-radius: 15px;
+    display:flex ;
+    flex-direction: column;
+    min-width: 500px;
+    margin-top: auto;
+    margin-bottom: auto;
+    max-height: 85%;
+
+}
+
+.scroll{
+    overflow-y: scroll;
+    /*Nada solo la barra de scroll*/
+}
+.scroll::-webkit-scrollbar{
+    display: none;
+}
+
+
+.H55px {
+    height: 55px;		
+}
+
+.form-tareas-agregar label {
+    margin-bottom: 5px;
+}
+
+.txtCenter {
+    text-align: center;
+}
+
+.diaContenedorHorario .day {
+    display: grid;
+    grid-template-columns: 20px auto;
+    margin-bottom: 4px;
+}
+.diaContenedorHorario .day input{
+    margin:auto 0px;
+}
+
+.diaContenedorHorario .gridDias {
+    display: grid;
+    grid-template-columns:15% 35% 15% 35%;
+}
+.diaContenedorHorario .gridDias .a{
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.diaContenedorHorario .gridDias.oculto{
+    display: none;
+}
+.btnTema {
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+    border: none;
+    background-color: transparent;
+}
+
+.oculto{
+
+}
+
+
+
+
+
+.Profe {
+    font-size: 30px;
+}
+
+.contenedorProfe .materia {
+    font-size: 20px;
+
+
+
+}
+
+
+.btnRegresarRegistro {
+    width: 50px;
+    height: 50px;
+    background-image: url("../Media/IMG/regresar.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    border:none;
+    float: left;
+    border-radius: 25px;
+    cursor: pointer;
+    margin: 5px 0px 0px 5px;
+}
+.btnRegresar {
+    width: 50px;
+    height: 50px;
+    background-image: url("../Media/IMG/regresar.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    border:none;
+    float: right;
+    border-radius: 25px;
+    cursor: pointer;
+    margin: 5px 0px 0px 5px;
+}
+.contenedorProfe2 {
+    display: grid;
+    grid-template-columns: 40% auto 60px;
+}
+
+.btnInfo {
+    height: 40px;
+    width: 40px;
+    background-image: url("../Media/IMG/info.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    border:none;
+    border-radius: 25px;
+    cursor: pointer;
+    background-size: 30px 30px;
+
+}
+
+.contenedorProfe2 .materia {
+
+}
+
+.contenedorProfe2 .info {
+    grid-row-start: 1;
+    grid-row-end: 4;
+    grid-column-start: 3;
+
+}
+
+
+.contenedorProfe2 .profe {
+    font-size: 20px;
+}
+
+.contenedorProfe2 .estrellas {
+    grid-row-start: 1;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    display: flex;
+    align-items: center;
+}
+
+
+.formInscribirEliminar {
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 200px;
+
+}
+.formInscribirEliminar input{
+
+}
+
+.btnEliminarProfe {
+    height: 50px;
+    width: 50px;
+    background-image: url("../Media/IMG/Eliminar_Grande.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    border:none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.div-admin-registro {
+    margin-right: 4%;
+    margin-left: 4%;
+    padding: 15px;
+    border-radius: 15px;
+    height: 360px;
+    width: 350px;
+}
+
+.tachado{
+    text-decoration:line-through;
+}
+.completado{
+    color: #666666; 
+}
+
+.FAQ_titulo{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.grid_FAQ {
+    display: grid;
+    grid-template-columns: 25px auto;
+}
+.grid_REP {
+    display: grid;
+    grid-template-columns: 25px auto 50px;
+}
+.grid_REP2 {
+    display: grid;
+    grid-template-columns: 25px auto 65px 50px;
+}
+
+
+.REP_TAGS{
+    display: flex;
+    flex-direction: column;
+    margin-right: 5px;
+}
+
+
+.Rep_vinculo{
+    display: grid;
+    grid-template-columns: auto  200px;
+}
+
+/*------------
+Diseño para pantallas de celular
+-------------*/
+@media screen and (max-height:500px) {
+    .caja-padre-inicio , .caja-padre-admin{
+        min-height:500px;
+    }
+
+}
+@media screen and (max-width: 500px) {
+    header{
+        flex-direction: column;
+    }
+    header div div{
+        width: 100%;
+        text-align: center;
+    }
+    nav{
+        margin-bottom: 10px;
+        width: 100%;
+    }
+    .grid-tabla{
+        display: grid;
+        grid-template-columns: 10% 70% 20%;
+    }
+    .popup-tareas-agregar , .popup-Profes-agregar{
+        min-width: 200px;
+    }
+    .header-fixed{
+        position: inherit;
+    }
+    .margen{
+        margin-top: 25px;
+    }
+    .contenedorProfe .dias {
+        display: grid;
+        grid-template-columns: repeat(2,auto);
+    }
+
+    .diaContenedor{
+        text-align: left;
+    }
+
+}
+
+
+@media screen and (max-width : 1420px ){
+    .caja-padre-inicio , .caja-padre-admin{
+        flex-direction: column;
+    }
+
+    .div-descripcion{
+        text-align: center;
+        margin-bottom: 25px;
+    }
+    .bnt-agregar{
+        width: 30px;
+        height:30px;
+        background-size:25px;
+    }
+
+}
+@media screen and (max-width: 800px) {
+    .popup-tareas-agregar , .popup-Profes-agregar {
+        min-width: 400px;
+    }
+}
