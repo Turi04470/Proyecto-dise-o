@@ -67,29 +67,106 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CSS\Detalle_Juego.css" />
+    <Content Include="JS\Detalle_Juego.js" />
+    <Content Include="JS\jquery-latest.js" />
+    <Content Include="WEB Services\Detalle_Juego.asmx" />
+    <Content Include="WEB\Juego_Detalle.aspx" />
+    <Content Include="CSS\Admin.css" />
+    <Content Include="CSS\Ajustes.css" />
     <Content Include="CSS\Animaciones.css" />
+    <Content Include="CSS\animate animted.css" />
     <Content Include="CSS\General.css" />
     <Content Include="CSS\Header.css" />
     <Content Include="CSS\Index.css" />
+    <Content Include="CSS\Inicio.css" />
     <Content Include="CSS\nuevoGeneral.css" />
     <Content Include="CSS\Tema.css" />
+    <Content Include="Fonts\Kodchasan\OFL.txt" />
+    <Content Include="Global.asax" />
     <Content Include="Index.aspx" />
+    <Content Include="JS\Admin.js" />
+    <Content Include="JS\Ajustes.js" />
     <Content Include="JS\Genesis.js" />
+    <Content Include="JS\header.js" />
     <Content Include="JS\Index.js" />
+    <Content Include="JS\Inicio.js" />
+    <Content Include="JS\JQuery.js" />
     <Content Include="JS\Registro.js" />
+    <Content Include="Media\IMG\default_game.jpg" />
+    <Content Include="WEB Services\Admin.asmx" />
+    <Content Include="WEB Services\Ajustes.asmx" />
+    <Content Include="WEB Services\Inicio.asmx" />
     <Content Include="Web.config" />
     <Content Include="WEB\404.html" />
+    <Content Include="WEB\Admin.aspx" />
+    <Content Include="WEB\Admin.html" />
+    <Content Include="WEB\Inicio.aspx" />
     <Content Include="WEB\Registro.aspx" />
     <Content Include="WEB\Registro.html" />
-    <Content Include="WEB\untitled.html" />
+    <Content Include="WEB\Ajustes.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion.cs" />
+    <Compile Include="Controlador\Agregar_Reque.ashx.cs">
+      <DependentUpon>Agregar_Reque.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Controlador\desplegar_juego.ashx.cs">
+      <DependentUpon>desplegar_juego.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Objetos\Favorito.cs" />
+    <Compile Include="Objetos\Juego_detalle.cs" />
+    <Compile Include="Objetos\Reque.cs" />
+    <Compile Include="WEB Services\Detalle_Juego.asmx.cs">
+      <DependentUpon>Detalle_Juego.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WEB\Juego_Detalle.aspx.cs">
+      <DependentUpon>Juego_Detalle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WEB\Juego_Detalle.aspx.designer.cs">
+      <DependentUpon>Juego_Detalle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Objetos\Computadora.cs" />
+    <Compile Include="Objetos\Estadisticas.cs" />
+    <Compile Include="Objetos\Juego.cs" />
+    <Compile Include="Objetos\Usuario.cs" />
+    <Compile Include="Controlador\Agregar_Categoria.ashx.cs">
+      <DependentUpon>Agregar_Categoria.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Controlador\Agregar_desarrolladora.ashx.cs">
+      <DependentUpon>Agregar_desarrolladora.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Controlador\Agregar_Game.ashx.cs">
+      <DependentUpon>Agregar_Game.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Controlador\Agregar_Genero.ashx.cs">
+      <DependentUpon>Agregar_Genero.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Controlador\Cerrar_Sesiont.ashx.cs">
+      <DependentUpon>Cerrar_Sesiont.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Controlador\Handler2.ashx.cs">
+      <DependentUpon>Handler2.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Controlador\ModificarCuenta.ashx.cs">
+      <DependentUpon>ModificarCuenta.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Controlador\ModificarPC.ashx.cs">
+      <DependentUpon>ModificarPC.ashx</DependentUpon>
+    </Compile>
     <Compile Include="Controlador\Iniciar_Sesion.ashx.cs">
       <DependentUpon>Iniciar_Sesion.ashx</DependentUpon>
     </Compile>
+    <Compile Include="Controlador\Permitir_registro_admin.ashx.cs">
+      <DependentUpon>Permitir_registro_admin.ashx</DependentUpon>
+    </Compile>
     <Compile Include="Controlador\Registrar.ashx.cs">
       <DependentUpon>Registrar.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
@@ -99,6 +176,32 @@
       <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WEB Services\Admin.asmx.cs">
+      <DependentUpon>Admin.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WEB Services\Ajustes.asmx.cs">
+      <DependentUpon>Ajustes.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WEB Services\Inicio.asmx.cs">
+      <DependentUpon>Inicio.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WEB\Admin.aspx.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WEB\Admin.aspx.designer.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WEB\Inicio.aspx.cs">
+      <DependentUpon>Inicio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WEB\Inicio.aspx.designer.cs">
+      <DependentUpon>Inicio.aspx</DependentUpon>
+    </Compile>
     <Compile Include="WEB\Registro.aspx.cs">
       <DependentUpon>Registro.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -106,11 +209,41 @@
     <Compile Include="WEB\Registro.aspx.designer.cs">
       <DependentUpon>Registro.aspx</DependentUpon>
     </Compile>
+    <Compile Include="WEB\Ajustes.aspx.cs">
+      <DependentUpon>Ajustes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WEB\Ajustes.aspx.designer.cs">
+      <DependentUpon>Ajustes.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Fonts\helvetica-bold.otf" />
     <Content Include="Controlador\Registrar.ashx" />
     <Content Include="Controlador\Iniciar_Sesion.ashx" />
+    <Content Include="Controlador\Handler2.ashx" />
+    <Content Include="Fonts\Kodchasan\Kodchasan-Bold.ttf" />
+    <Content Include="Fonts\Kodchasan\Kodchasan-BoldItalic.ttf" />
+    <Content Include="Fonts\Kodchasan\Kodchasan-ExtraLight.ttf" />
+    <Content Include="Fonts\Kodchasan\Kodchasan-ExtraLightItalic.ttf" />
+    <Content Include="Fonts\Kodchasan\Kodchasan-Italic.ttf" />
+    <Content Include="Fonts\Kodchasan\Kodchasan-Light.ttf" />
+    <Content Include="Fonts\Kodchasan\Kodchasan-LightItalic.ttf" />
+    <Content Include="Fonts\Kodchasan\Kodchasan-Medium.ttf" />
+    <Content Include="Fonts\Kodchasan\Kodchasan-MediumItalic.ttf" />
+    <Content Include="Fonts\Kodchasan\Kodchasan-Regular.ttf" />
+    <Content Include="Fonts\Kodchasan\Kodchasan-SemiBold.ttf" />
+    <Content Include="Fonts\Kodchasan\Kodchasan-SemiBoldItalic.ttf" />
+    <Content Include="Controlador\ModificarPC.ashx" />
+    <Content Include="Controlador\ModificarCuenta.ashx" />
+    <Content Include="Controlador\Cerrar_Sesiont.ashx" />
+    <Content Include="Controlador\Agregar_desarrolladora.ashx" />
+    <Content Include="Controlador\Agregar_Game.ashx" />
+    <Content Include="Controlador\Agregar_Genero.ashx" />
+    <Content Include="Controlador\Agregar_Categoria.ashx" />
+    <Content Include="Controlador\Permitir_registro_admin.ashx" />
+    <Content Include="Controlador\desplegar_juego.ashx" />
+    <Content Include="Controlador\Agregar_Reque.ashx" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

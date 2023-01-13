@@ -1,6 +1,23 @@
 @charset "utf-8";
-/* CSS Document */
+
+@font-face {
+  font-family: 'Helvetica';
+  src: url("../Fonts/helvetica-bold.otf");
+ 
+}
+
+@font-face{
+	font-family: 'Kodchasan';
+	src: url("../Fonts/Kodchasan/Kodchasan-Regular.ttf"),url("../Fonts/Kodchasan/Kodchasan-Bold.ttf"),url('../Fonts/Kodchasan/Kodchasan-ExtraLight.ttf');
+}
+input{
+	font-family: 'Kodchasan';
+}
+
+
+
 body{
+	font-family: 'Kodchasan';
     /*color de fondo*/
 	
     background-color: rgba(28,30,33,1.00);
@@ -16,14 +33,20 @@ header{
 }
 
 .titulo , .Titulo-de-pagina{
-    color: #1D8348;
-    /*este es el color verde*/
+   /* color: #1D8348;*/
+	 /*este es el color verde*/
+	
+	
+	background: linear-gradient(to right, #4cb8c4, #3cd3ad);
+    -webkit-background-clip: text;
+    color: transparent;
+   
 }
 
 
 
 /*Aplicar Etilo a cajas de contenido*/
-.div-login-registro,.selector,.btn_tomar, .div-cuerpo-tareas-tutorias  ,.caja_Default ,.popup-tareas-agregar , .bnt-agregar , .contenedor,.popup-Profes-agregar ,.btnRegresar , .btnRegresarRegistro , .btnInfo ,.btnEliminarProfe ,.div-admin-registro,.cajaContenido{
+.div-login-registro,.selector,.btn_tomar, .div-cuerpo-tareas-tutorias  ,.caja_Default ,.popup-tareas-agregar , .bnt-agregar , .contenedor,.popup-Profes-agregar ,.btnRegresar , .btnRegresarRegistro , .btnInfo ,.btnEliminarProfe ,.div-admin-registro,.cajaContenido,.popup{
     /*color del fondo de las cajas de formulario*/
     background-color: rgba(36,37,38,1.00);
     /*sombra de las cajas por ejemplo la caja redondeada de los formularios de registro de secion*/
@@ -43,27 +66,50 @@ header{
 }
 
 .btn-iniciar-registrar, .btn-incribir {
-    /*color del fondo de botones verdes*/
+    /*color del fondo de botones verdes
     background-color:#1d8348;
-    /*color de la letra*/
-    color: white;
+    color de la letra
+    */
+	
+	
+	background: -webkit-linear-gradient(to right, #2b5876, #4e4376); 
+    background: linear-gradient(to right, #2b5876, #4e4376); 
+	color: white;
+	
 
 }
 
 .btn-cuenta-nueva {
-    /*color de la letra*/
-    color: white;
-    /*color verde claro de los bonones de index */
-    background-color: limegreen;
+  
+	/*Color verde*/
+    /* background-color: limegreen;*/
+	
+	
+	/*Degradado*/
+	background: -webkit-linear-gradient(to right, #0072ff, #00c6ff);  
+	background: linear-gradient(to right, #0044FF, #00AEE0); 
+	color: white;
+	
 }
 
-.input{
+.input,.input_form{
     /*fondo de los inputs*/
     background-color: rgba(36,37,38,1.00);
     color: white;
     border-color: black;
+	
 
 }
+
+
+.input_valid {
+    border-color: lime;
+}
+
+.input_invalid {
+    border-color: red;
+}
+
 
 /*----------------
 Hasta aqui pag inicio y registro

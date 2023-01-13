@@ -19,16 +19,21 @@ namespace Proyecto_diseño.Controlador
         {
             string correo_login = context.Request["correo_login"];
             string pass_login = context.Request["pass_login"];
-
+            int ID_USER = -1;
+            Boolean _admin = false;
 
             string sql = "Execute iniciar_sesion N'" + correo_login + "' , N'" + pass_login + "';";
 
             Conexion conexion = new Conexion();
-
             SqlCommand cmd = new SqlCommand(sql, conexion.Open());
-            int n = cmd.ExecuteNonQuery();
-
+            cmd.ExecuteNonQuery();
             SqlDataReader reader = cmd.ExecuteReader();
+
+
+            Boolean logueado = false;
+
+
+
 
 
             //si el data reader tiene informacion
@@ -39,34 +44,63 @@ namespace Proyecto_diseño.Controlador
                 {
                     if (correo_login.Equals(reader["correo"].ToString()) && pass_login.Equals(reader["pass"].ToString()))
                     {
-                        HttpContext.Current.Response.Redirect("https://www.kyocode.com");
-                        
+                        logueado = true;
+                        ID_USER = int.Parse(reader["id_user"].ToString());
+
+
+                        if (Boolean.Parse(reader["_admin"].ToString()))
+                        {
+                            _admin = true;
+
+
+                        }
+                        else
+                        {
+                            _admin = false;
+
+                        }
+
                     }
-                    
+
                 }
             }
             else
             {
-                HttpContext.Current.Response.Redirect("../WEB/404.html");
+
+                //Codigo cuando falla el inicio
+
+                context.Application["credenciales_incorrectos"] = 1;
+                reader.Close();
+                conexion.Close();
+                HttpContext.Current.Response.Redirect("../Index.aspx");
+            }
+
+            if (logueado)
+            {
+                if (_admin)
+                {
+                    context.Application["_admin"] = true;
+
+                }
+                else
+                {
+                    context.Application["_admin"] = false;
+
+                }
+
+                context.Application["ID_USER"] = ID_USER;
+                context.Application["login"] = true;
+                reader.Close();
+                conexion.Close();
+                HttpContext.Current.Response.Redirect("../WEB/Inicio.aspx");
+
             }
 
 
 
-            reader.Close();
+          
 
 
-
-
-
-            //Cerrar conexion
-            conexion.Close();
-
-            /*
-            context.Response.ContentType = "text/plain";
-            context.Response.Write("Hola a todos");
-            context.Response.Write(Environment.MachineName);
-
-            */
 
 
 

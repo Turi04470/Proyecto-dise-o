@@ -17,7 +17,7 @@ namespace Proyecto_diseño.Controlador
 
         public void ProcessRequest(HttpContext context)
         {
-            
+
             /*
             context.Response.ContentType = "text/plain";
             context.Response.Write("Hola a todos");
@@ -25,32 +25,94 @@ namespace Proyecto_diseño.Controlador
             */
 
 
-            string correo_login = context.Request["correo_login"];
-            string pass_login = context.Request["correo_login"];
+            string correo_registro = context.Request["correo_registro"];
+            string pass_registro = context.Request["pass_registro"];
+            string usuario_registro = context.Request["usuario_registro"];
+
+            Boolean registro_admin = (Boolean)(context.Application["registro_admin"]);
+            context.Application["Existe_usuario"] = 2;
 
 
-            string sql = "Execute registar_user N'Turi' , N'Turi@gmail.com' ,N'Turi', 0;";
 
-
+            string sql = "Execute existe_correo N'" + correo_registro + "';";
             Conexion conexion = new Conexion();
+            SqlCommand cmd = new SqlCommand(sql, conexion.Open());
+
+
+
 
             try
             {
-                SqlCommand cmd = new SqlCommand(sql, conexion.Open());
-                int n = cmd.ExecuteNonQuery();
-
+                cmd.ExecuteNonQuery();
+                conexion.Close();
             }
             catch (Exception)
             {
-               
+
+                context.Application["fallo_desconocido"] = true;
+
+                conexion.Close();
+                HttpContext.Current.Response.Redirect("../WEB/Registro.aspx");
                 throw;
             }
-
-            conexion.Close();
-
+            SqlDataReader reader = cmd.ExecuteReader();
 
 
 
+            //si el data reader tiene informacion
+            if (reader.HasRows)
+            {
+                //Ya existe el usuario
+                context.Application["Existe_usuario"] = 1;
+                context.Application["registro_exito"] = 0;
+                HttpContext.Current.Response.Redirect("../WEB/Registro.aspx");
+            }
+            else
+            {
+
+                if (registro_admin)
+                {
+                    sql = "Execute registar_user_admin N'" + usuario_registro + "' , N'" + correo_registro + "' ,N'" + pass_registro + "',1;";
+                }
+                else
+                {
+                    sql = "Execute registar_user N'" + usuario_registro + "' , N'" + correo_registro + "' ,N'" + pass_registro + "';";
+                }
+                context.Application["registro_admin"] = false;
+
+                cmd = new SqlCommand(sql, conexion.Open());
+                cmd.ExecuteNonQuery();
+
+
+
+
+                //Cmprobar que te registraste
+
+                sql = "Execute existe_correo N'" + correo_registro + "'";
+                cmd = new SqlCommand(sql, conexion.Open());
+                cmd.ExecuteNonQuery();
+                reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    context.Application["registro_exito"] = 1;
+                    reader.Close();
+                    conexion.Close();
+                    HttpContext.Current.Response.Redirect("../Index.aspx");
+                }
+
+
+
+
+
+
+
+
+
+
+
+
+
+            }
 
 
         }

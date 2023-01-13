@@ -1,0 +1,103 @@
+:root{
+	--mainColor: rgba(28,30,33,1.00);
+    --fontColor: rgba(200,200,200,1.00);
+    --segundoColor: rgba(36,37,38,1.00);
+    --resaltadoColor: rgba(22,47,68);
+	
+}
+
+
+.juego {
+	
+	width: 200px;
+	margin: 20px 10px;	
+	
+}
+
+.filtros {
+	padding: 5px 0px;
+	margin-bottom: 15px;
+	margin: 30px auto;
+	width: 200px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.imagen_juego {
+	width: 100%;
+	height:300px;
+	display: flex;
+	align-items: center;
+	
+	
+	
+}
+
+.titulo_juego {
+	font-size: 18px;
+	text-align: center;
+	font-weight: 700;
+	margin: 5px auto;
+	border: none;
+	background-color: transparent;
+	color: var(--fontColor);
+	cursor:pointer;
+	
+}
+
+.categoria_juego {
+	font-weight:lighter;
+	font-size: 12px;
+	margin: auto;
+	background-color: transparent;
+	border: none;
+	color: var(--fontColor);
+}
+
+.id_input {
+	width: 100%;
+	background-color: transparent;
+	border: none;
+
+	color: white;
+	text-align: center;
+	
+}
+
+
+
+.img_juego {
+	width: 100%;
+	overflow: hidden;
+}
+
+.imagen_juego img{
+	width: 100%;
+	height: 100%;	
+	object-fit: cover;
+	object-position: center;
+	border-radius: 10px;
+	
+}
+
+.juegos {
+	display:flex;
+	flex-wrap: wrap;
+	padding:auto ;
+}
+
+
+
+.popup {
+	
+}
+
+.form_filtros {
+	display: grid;
+}
+
+
+.form_popup {
+	display: flex;
+flex-direction: column;
+}
