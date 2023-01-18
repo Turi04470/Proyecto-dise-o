@@ -11,7 +11,7 @@
 
     if (!logueado )
     {
-        HttpContext.Current.Response.Redirect("404.html");
+        HttpContext.Current.Response.Redirect("../Index.aspx");
     }
 
 
@@ -36,28 +36,21 @@
 
     <!--Fonts-->
 
-    <link href="Fonts/Kodchasan/Kodchasan-Regular.ttf" />
+    <link href="Fonts/Kodchasan/Kodchasan-Regular.ttf" rel="stylesheet"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,1,0" />
 </head>
 
 <body>
     <header id="header">
-        <div class="">
-            <div id="titulo_pagina">Inicio</div>
-
-            <nav class="menu" data-animation="center">
-                <a href="Inicio.aspx" id="link_inicio" class="">Inicio</a>
-                <a href="" id="link_">Pagina</a>
-                <a href="" id="link_">Pagina</a>
-                <a href="" id="link_">Pagina</a>
-                <a href="" id="link_">Pagina</a>
-                <a href="Ajustes.aspx" id="link_ajustes">Ajustes</a>
-
-                <a href="Admin.aspx" id="link_admin" class="<%if (!_admin) { Response.Write("hidden"); }%>">Admin</a>
-
-            </nav>
-        </div>
-    </header>
+			<div class="">
+				<div id="titulo_pagina">Juego</div>
+				<nav class="menu" data-animation="center">
+					<a href="Inicio.aspx" id="link_inicio" class="">Inicio</a>
+					<a href="Ajustes.aspx" id="link_ajustes">Ajustes</a>
+					<a href="Admin.aspx" id="link_admin" class="<%if (!_admin) { Response.Write("hidden"); }%>">Admin</a>
+				</nav>
+			</div>
+		</header>
     <div class="div-cuerpo">
 
         <!--Imagen del juego-->
@@ -165,7 +158,7 @@
     <!--Agregar Juego-->
     <div class="overlay oculto" id="overlayJuego">
         <div class="popup-tareas-agregar">
-            <form action="../Controlador/Agregar_Game.ashx" class="form-tareas-agregar" runat="server" id="form_juego">
+            <form action="../Controlador/Modificar_Game.ashx" class="form-tareas-agregar" runat="server" id="form_juego">
 
                 <label>Nombre</label>
                 <div class="error_input" hidden="hidden" id="error_juego">El nombre del juego ya existe</div>
@@ -196,8 +189,8 @@
                 <input type="text" name="in_img" value="" id="in_img" placeholder="Inserta URL de una imagen" autocomplete="off" class="input_form" />
 
                 <div class="caja-padre">
-                    <input type="submit" value="Actualizar" class="btn_submit_popup btn-cuenta-nueva" id="AgregarJuego">
-                    <input type="button" class="btn_submit_popup btn-color-rojo" value="Cancelar" id="CancelarJuego">
+                    <input type="submit" value="Actualizar" class="btn_submit_popup btn-cuenta-nueva" id="AgregarJuego"/>
+                    <input type="button" class="btn_submit_popup btn-color-rojo" value="Cancelar" id="CancelarJuego"/>
                 </div>
 
             </form>
@@ -244,8 +237,8 @@
 
 
                 <div class="caja-padre">
-                    <input type="submit" value="Actualizar" class="btn_submit_popup btn-cuenta-nueva" id="AgregarReque">
-                    <input type="button" class="btn_submit_popup btn-color-rojo" value="Cancelar" id="CancelarReque">
+                    <input type="submit" value="Actualizar" class="btn_submit_popup btn-cuenta-nueva" id="AgregarReque"/>
+                    <input type="button" class="btn_submit_popup btn-color-rojo" value="Cancelar" id="CancelarReque"/>
                 </div>
             </form>
         </div>

@@ -35,8 +35,8 @@
 
 
     <!--Fonts-->
-    <link href="Fonts/helvetica-bold.otf" />
-    <link href="Fonts/Kodchasan/Kodchasan-Regular.ttf" />
+    <link href="Fonts/helvetica-bold.otf" rel="stylesheet"/>
+    <link href="Fonts/Kodchasan/Kodchasan-Regular.ttf" rel="stylesheet"/>
 
 
 
@@ -105,7 +105,7 @@
 
             <div class="caja-padre">
 
-                <input type="button" value="OK" class="btn_submit_popup btn-cuenta-nueva" id="OK">
+                <input type="button" value="OK" class="btn_submit_popup btn-cuenta-nueva" id="OK"/>
             </div>
 
         </div>
@@ -125,7 +125,7 @@
 
             <div class="caja-padre">
 
-                <input type="button" value="OK" class="btn_submit_popup btn-cuenta-nueva" id="OK_R">
+                <input type="button" value="OK" class="btn_submit_popup btn-cuenta-nueva" id="OK_R"/>
             </div>
 
         </div>

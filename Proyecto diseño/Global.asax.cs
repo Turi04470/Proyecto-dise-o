@@ -31,6 +31,13 @@ namespace Proyecto_diseño
 
             //Variable para Inicio
             Application["ID_JUEGO"] = 0;
+            Application["sql_filtro"] = @"SELECT 
+                    game.id_juego,
+                    game.titulo,
+                    categoria.nombre as categoria,
+                    game.img as urlIMG
+                FROM game
+                INNER JOIN categoria ON categoria.id_categoria=game.id_categoria";
 
         }
 

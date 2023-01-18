@@ -8,7 +8,7 @@
 
     if (!logueado)
     {
-        HttpContext.Current.Response.Redirect("404.html");
+        HttpContext.Current.Response.Redirect("../Index.apsx");
     }
 
     
@@ -31,7 +31,7 @@
 		
 		<!--Fonts-->
 		
-		<link href="Fonts/Kodchasan/Kodchasan-Regular.ttf" />
+		<link href="Fonts/Kodchasan/Kodchasan-Regular.ttf" rel="stylesheet"/>
 	</head>
 	
 	<body>
@@ -40,10 +40,6 @@
 				<div id="titulo_pagina">Inicio</div>
 				<nav class="menu" data-animation="center">
 					<a href="Inicio.aspx" id="link_inicio" class="">Inicio</a>
-					<a href="" id="link_">Pagina</a>
-					<a href="" id="link_">Pagina</a>
-					<a href="" id="link_">Pagina</a>
-					<a href="" id="link_">Pagina</a>
 					<a href="Ajustes.aspx" id="link_ajustes">Ajustes</a>
 					<a href="Admin.aspx" id="link_admin" class="<%if (!_admin) { Response.Write("hidden"); }%>">Admin</a>
 				</nav>
@@ -75,49 +71,50 @@
 		
 		<!--Pop UP-->
 		<!--Filtros-->
-    <div class="overlay " id="overlay_filtro">
+    <div class="overlay oculto" id="overlay_filtro">
         <div class="popup">
-            <form action="" class="form_popup" runat="server">
+            <form action="../Controlador/Filtros.ashx" class="form_popup" runat="server">
 
                 		
 				<label>Ordenar por</label>
 				<select name="orden" id="orden" class="input">
-					<option selected="selected" disabled="disabled" hidden="hidden" value="">Selecione</option>
+					<option selected="selected" hidden="hidden" value="0">Selecione</option>
+					<option value="0">Sin filtro</option>
 					<option value="1">nombre</option>
-					<option value="">fecha</option>
-					<option value="">Categoria</option>
+					<option value="2">fecha</option>
+					<option value="3">Categoria</option>
 				</select>
 				
 				<label>Ver unicamente</label>
 				<select name="tipo_vista" id="tipo_vista" class="input">
-					<option selected="selected" disabled="disabled" hidden="hidden" value="">Selecione</option>
-					<option value="">Favoritos</option>
-					<Option value="">No me gusta</Option>
-					<Option value="">Año</Option>
-					<Option value="">Plataforma</Option>
+					<option selected="selected" hidden="hidden" value="0">Selecione</option>
+					<option value="0">Sin filtro</option>
+					<option value="1">Favoritos</option>
+					<option value="2">No me gusta</option>
+					<option value="3">Año</option>
+					<option value="4">Plataforma</option>
+					<option value="5">Categoria</option>
 				</select>
 				
-				<label>Selecione</label>
-                <!-- para favoritos -->
-				<asp:DropDownList ID="favoritos" runat="server"></asp:DropDownList>
+				
+                
 				
 				<!-- para year-->
-				<select name="" id="year">
-					<option disabled selected value> -- select an option -- </option>
-					<option value="1"></option>
-					<option value="2"></option>
-					<option value="3"></option>
-				</select>
-				
-				<!-- Para categoria -->
-				
-				
-				<!-- para plataforma -->
+                <asp:DropDownList ID="year" runat="server" DataSourceID="SqlData_Year" DataTextField="Column1" DataValueField="Column1" CssClass="input hidden"></asp:DropDownList>
+				<asp:SqlDataSource runat="server" ID="SqlData_Year" ConnectionString='<%$ ConnectionStrings:VIDEOJUEGOSConnectionString %>' SelectCommand="SELECT DISTINCT  YEAR(lanzamiento) FROM [game] ORDER BY  YEAR(lanzamiento);"></asp:SqlDataSource>
+                <!-- Para categoria -->
+                <asp:DropDownList ID="categoria" runat="server" DataSourceID="SqlData_categoria" DataTextField="nombre" DataValueField="nombre" CssClass="input hidden"></asp:DropDownList>
+                <asp:SqlDataSource runat="server" ID="SqlData_categoria" ConnectionString='<%$ ConnectionStrings:VIDEOJUEGOSConnectionString %>' SelectCommand="SELECT [nombre] FROM [categoria]"></asp:SqlDataSource>
 
-
-                <div class="caja-padre">
-                    <input type="submit" value="Aplicar" class="btn_submit_popup btn-cuenta-nueva" id="AgregarGenero">
-                    <input type="button" class="btn_submit_popup btn-cuenta-nueva btn-color-rojo" value="Cancelar" id="cancelar_filtro">
+                <!-- para plataforma -->
+                <asp:DropDownList ID="plataforma" runat="server" DataSourceID="SqlData_plataforma" DataTextField="nombre" DataValueField="nombre" CssClass="input hidden"></asp:DropDownList>
+                <asp:SqlDataSource runat="server" ID="SqlData_plataforma" ConnectionString='<%$ ConnectionStrings:VIDEOJUEGOSConnectionString %>' SelectCommand="SELECT [nombre] FROM [plataforma]"></asp:SqlDataSource>
+                
+				
+				
+				<div class="caja-padre">
+                    <input type="submit" value="Aplicar" class="btn_submit_popup btn-cuenta-nueva" id="AgregarGenero"/>
+                    <input type="button" class="btn_submit_popup btn-cuenta-nueva btn-color-rojo" value="Cancelar" id="cancelar_filtro"/>
                 </div>
             </form>
         </div>

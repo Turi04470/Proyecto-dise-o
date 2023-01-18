@@ -1,8 +1,10 @@
 
 --------------------------------------------------------
 
---BASE DE DATOS USADA
---EJECUTAR TODA PARA PODER USAR LAS CONSULTAS
+--Nota: para acceder a la apliccion web como administrador utilice los sigueintes datos
+--
+--correo: admin@gmail.com
+--pass: administrador
 ----Solis Torres Camilo
 
 ----------------------------------------------------------
@@ -304,6 +306,30 @@ AS
 	id_juego=@id_juego
 GO
 
+--16
+--12
+CREATE PROCEDURE modificar_game
+	@id_juego int,
+	@titulo NVARCHAR(50),
+	@id_desarrolLadora INT,
+	@lanzamiento DATE,
+	@id_categoria INT,
+	@id_plataforma int,
+	@id_idioma INT,
+	@img NVARCHAR(200)
+AS
+	UPDATE game
+	SET
+	titulo=@titulo,
+	id_desarrolLadora=@id_desarrolLadora,
+	lanzamiento=@lanzamiento,
+	id_categoria=@id_categoria,
+	id_plataforma=@id_plataforma,
+	id_idioma=@id_idioma,
+	img=@img
+	WHERE id_juego=@id_juego
+GO
+
 
 INSERT INTO idioma(nombre) VALUES
 ('Inglés'),
@@ -324,9 +350,6 @@ INSERT INTO plataforma VALUES
 ('Windows 8'),
 ('Windows 10'),
 ('Windows 11'),
-('Windows 7 en adelante'),
-('Windows 8 en adelante'),
-('Windows 10 en adelante'),
 ('Mac OS'),
 ('Linux'),
 ('Android'),
@@ -349,16 +372,20 @@ INSERT INTO desarrolladora(nombre,publisher) VALUES
 ('FromSoftware','Bandai Namco Entertainment'),
 ('Team Cherry',null),
 ('Crytek',null),
-('PlatinumGames','SEGA');
+('PlatinumGames','SEGA'),
+('Black Lab Games','Matrix Games/Slitherine');
 
 INSERT INTO game(titulo,id_desarrolLadora,lanzamiento,id_categoria,id_plataforma,id_idioma,img) VALUES
-('Elden Ring',1,'2022-2-25',1,3,1,'https://elamigosedition.com/uploads/posts/2021-11/elden-ring-cover-download.webp'),
-('Hollow Knight',2,'2017-2-24',6,3,1,'https://elamigosedition.com/uploads/posts/2019-05/1557485836_hollow-knight-cover-download.webp'),
-('Crysis 2',3,'2011-3-22',2,5,1,'https://elamigosedition.com/uploads/posts/2022-11/crysis-2-remastered-cover-download.webp'),
-('Bayoneta',4,'2017-4-11',2,5,1,'https://elamigosedition.com/uploads/posts/2019-05/1556706731_bayonetta-cover-download.webp');
+('Elden Ring',1,'2022-2-25',1,4,1,'https://elamigosedition.com/uploads/posts/2021-11/elden-ring-cover-download.webp'),
+('Hollow Knight',2,'2017-2-24',6,1,1,'https://elamigosedition.com/uploads/posts/2019-05/1557485836_hollow-knight-cover-download.webp'),
+('Crysis 2',3,'2011-3-22',2,3,1,'https://elamigosedition.com/uploads/posts/2022-11/crysis-2-remastered-cover-download.webp'),
+('Bayoneta',4,'2017-4-11',2,4,1,'https://elamigosedition.com/uploads/posts/2019-05/1556706731_bayonetta-cover-download.webp'),
+('Warhammer 40000 Battlesector',5,'2021-7-22',6,2,1,'https://elamigosedition.com/uploads/posts/2021-07/1627393836_warhammer-40000-battlesector-cover-download.webp');
 
 INSERT INTO requeriemientos(id_juego,min_procesador,min_graficos,min_ram,min_so,recomendado_procesador,recomendado_graficos,recomendado_ram,recomendado_so) VALUES
-(1,'Intel Core i5-8400 2.8 GHz / AMD Ryzen 3 3300X 3.8 GHz','3 GB GeForce GTX 1060 / 4 GB Radeon RX 580','12 GB RAM','Windows 10','Intel Core i7-8700K 3.7 GHz / AMD Ryzen 5 3600X 3.8 GHz','8 GB GeForce GTX 1070 / Radeon RX Vega 56','16 GB RAM','Windows 10/11');
+(1,'Intel Core i5-8400 2.8 GHz / AMD Ryzen 3 3300X 3.8 GHz','3 GB GeForce GTX 1060 / 4 GB Radeon RX 580','12 GB RAM','Windows 10','Intel Core i7-8700K 3.7 GHz / AMD Ryzen 5 3600X 3.8 GHz','8 GB GeForce GTX 1070 / Radeon RX Vega 56','16 GB RAM','Windows 10/11'),
+(2,'Intel Core 2 Duo E5200 2.5 GHz',' 1 GB GeForce 9800 GTX','4 GB RAM','Windows 7','Intel Core i5 3.0 GHz','1 GB GeForce GTX 560','8 GB RAM','Windows 10'),
+(3,' Intel Core i5-3450 / AMD Ryzen 3','4 GB GeForce GTX 1050 Ti / Radeon RX 470','8 GB RAM','Windows 10 64-bit','Intel Core i5-7600K / AMD Ryzen 5','8 GB GeForce GTX 1660 Ti / Radeon RX Vega 56','12 GB RAM','Windows 10 64-bit');
 
 
 INSERT INTO favoritos(id_user,id_juego) VALUES

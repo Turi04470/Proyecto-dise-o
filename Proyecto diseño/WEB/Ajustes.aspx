@@ -9,7 +9,7 @@
 
     if (!logueado)
     {
-        HttpContext.Current.Response.Redirect("404.html");
+        HttpContext.Current.Response.Redirect("../Index.aspx");
     }
 
 
@@ -24,14 +24,14 @@
     <!--CSS-->
 
     <link rel="stylesheet" href="../CSS/General.css" />
-    <link rel="stylesheet" href="../CSS/Header.css">
-    <link rel="stylesheet" href="../CSS/Tema.css">
-    <link rel="stylesheet" href="../CSS/nuevoGeneral.css">
-    <link rel="stylesheet" href="../CSS/Ajustes.css">
+    <link rel="stylesheet" href="../CSS/Header.css"/>
+    <link rel="stylesheet" href="../CSS/Tema.css"/>
+    <link rel="stylesheet" href="../CSS/nuevoGeneral.css"/>
+    <link rel="stylesheet" href="../CSS/Ajustes.css"/>
 
     <!--Fonts-->
 
-    <link href="Fonts/Kodchasan/Kodchasan-Regular.ttf" />
+    <link href="Fonts/Kodchasan/Kodchasan-Regular.ttf" rel="stylesheet"/>
 
 
 
@@ -39,22 +39,15 @@
 
 <body>
     <header id="header">
-        <div class="">
-            <div id="titulo_pagina">Ajustes</div>
-
-            <nav class="menu" data-animation="center">
-                <a href="Inicio.aspx" id="link_inicio" class="">Inicio</a>
-                <a href="" id="link_">Pagina</a>
-                <a href="" id="link_">Pagina</a>
-                <a href="" id="link_">Pagina</a>
-                <a href="" id="link_">Pagina</a>
-                <a href="Ajustes.aspx" id="link_ajustes">Ajustes</a>
-
-                <a href="Admin.aspx" id="link_admin" class="<% if (!_admin) { Response.Write("hidden"); }%>">Admin</a>
-
-            </nav>
-        </div>
-    </header>
+			<div class="">
+				<div id="titulo_pagina">Ajustes</div>
+				<nav class="menu" data-animation="center">
+					<a href="Inicio.aspx" id="link_inicio" class="">Inicio</a>
+					<a href="Ajustes.aspx" id="link_ajustes">Ajustes</a>
+					<a href="Admin.aspx" id="link_admin" class="<%if (!_admin) { Response.Write("hidden"); }%>">Admin</a>
+				</nav>
+			</div>
+		</header>
 
 
 
@@ -79,7 +72,7 @@
             </div>
             <div class="caja-padre">
 
-                <input type="button" class="btn_submit_popup btn-cuenta-nueva btnCambiar" value="Cambiar" id="bntCambiarInfoCuenta">
+                <input type="button" class="btn_submit_popup btn-cuenta-nueva btnCambiar" value="Cambiar" id="bntCambiarInfoCuenta"/>
             </div>
 
         </div>
@@ -102,7 +95,7 @@
             </div>
             <div class="caja-padre">
 
-                <input type="button" class="btn_submit_popup btn-cuenta-nueva btnCambiar" value="Cambiar" id="btnCambiarPC">
+                <input type="button" class="btn_submit_popup btn-cuenta-nueva btnCambiar" value="Cambiar" id="btnCambiarPC"/>
             </div>
         </div>
 
@@ -182,8 +175,8 @@
                 </select>
 
                 <div class="caja-padre">
-                    <input type="submit" value="Actualizar" class="btn_submit_popup btn-cuenta-nueva" id="btnUpdatePC">
-                    <input type="button" class="btn_submit_popup btn-color-rojo" value="Cancelar" id="cancelarUpdatePC">
+                    <input type="submit" value="Actualizar" class="btn_submit_popup btn-cuenta-nueva" id="btnUpdatePC"/>
+                    <input type="button" class="btn_submit_popup btn-color-rojo" value="Cancelar" id="cancelarUpdatePC"/>
                 </div>
             </form>
         </div>

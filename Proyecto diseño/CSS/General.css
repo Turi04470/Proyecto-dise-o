@@ -417,16 +417,16 @@ margin: 0px 20px;
 
 
 
-    .form-tareas-agregar,.form_popup input, textarea, select {
-        margin-bottom: 15px;
-        border-radius: 5px;
-        padding: 5px 10px;
-    }
+.form_popup,.form-tareas-agregar input, textarea, select {
+    margin-bottom: 15px;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
 
 
-    .form-tareas-agregar,.form_popup input {
-        overflow: hidden;
-    }
+.form_popup,.form-tareas-agregar input {
+    overflow: hidden;
+}
 
 .btn_submit_popup {
     width: 80px;

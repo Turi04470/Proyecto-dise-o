@@ -37,13 +37,7 @@ namespace Proyecto_diseño.WEB_Services
 
 
 
-            sql = @"SELECT 
-                    game.id_juego,
-                    game.titulo,
-                    categoria.nombre as categoria,
-                    game.img as urlIMG
-                FROM game
-                INNER JOIN categoria ON categoria.id_categoria=game.id_categoria";
+            sql = context.Application["sql_filtro"].ToString();
 
             cmd = new SqlCommand(sql, conexion.Open());
             cmd.ExecuteNonQuery();

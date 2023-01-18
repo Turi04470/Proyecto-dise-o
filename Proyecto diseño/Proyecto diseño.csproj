@@ -114,6 +114,9 @@
     <Compile Include="Controlador\desplegar_juego.ashx.cs">
       <DependentUpon>desplegar_juego.ashx</DependentUpon>
     </Compile>
+    <Compile Include="Controlador\Modificar_Game.ashx.cs">
+      <DependentUpon>Modificar_Game.ashx</DependentUpon>
+    </Compile>
     <Compile Include="Objetos\Favorito.cs" />
     <Compile Include="Objetos\Juego_detalle.cs" />
     <Compile Include="Objetos\Reque.cs" />
@@ -147,8 +150,8 @@
     <Compile Include="Controlador\Cerrar_Sesiont.ashx.cs">
       <DependentUpon>Cerrar_Sesiont.ashx</DependentUpon>
     </Compile>
-    <Compile Include="Controlador\Handler2.ashx.cs">
-      <DependentUpon>Handler2.ashx</DependentUpon>
+    <Compile Include="Controlador\Filtros.ashx.cs">
+      <DependentUpon>Filtros.ashx</DependentUpon>
     </Compile>
     <Compile Include="Controlador\ModificarCuenta.ashx.cs">
       <DependentUpon>ModificarCuenta.ashx</DependentUpon>
@@ -221,7 +224,7 @@
     <Content Include="Fonts\helvetica-bold.otf" />
     <Content Include="Controlador\Registrar.ashx" />
     <Content Include="Controlador\Iniciar_Sesion.ashx" />
-    <Content Include="Controlador\Handler2.ashx" />
+    <Content Include="Controlador\Filtros.ashx" />
     <Content Include="Fonts\Kodchasan\Kodchasan-Bold.ttf" />
     <Content Include="Fonts\Kodchasan\Kodchasan-BoldItalic.ttf" />
     <Content Include="Fonts\Kodchasan\Kodchasan-ExtraLight.ttf" />
@@ -244,6 +247,7 @@
     <Content Include="Controlador\Permitir_registro_admin.ashx" />
     <Content Include="Controlador\desplegar_juego.ashx" />
     <Content Include="Controlador\Agregar_Reque.ashx" />
+    <Content Include="Controlador\Modificar_Game.ashx" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

@@ -12,7 +12,7 @@
 
     if (!logueado || !_admin)
     {
-        HttpContext.Current.Response.Redirect("404.html");
+        HttpContext.Current.Response.Redirect("../Index.aspx");
     }
     
 
@@ -24,39 +24,33 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+    <title>Admin</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <!--CSS-->
 
     <link rel="stylesheet" href="../CSS/General.css" />
-    <link rel="stylesheet" href="../CSS/Header.css">
-    <link rel="stylesheet" href="../CSS/Tema.css">
-    <link rel="stylesheet" href="../CSS/nuevoGeneral.css">
-    <link rel="stylesheet" href="../CSS/Admin.css">
+    <link rel="stylesheet" href="../CSS/Header.css"/>
+    <link rel="stylesheet" href="../CSS/Tema.css"/>
+    <link rel="stylesheet" href="../CSS/nuevoGeneral.css"/>
+    <link rel="stylesheet" href="../CSS/Admin.css"/>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet" />
 
     <!--Fonts-->
 
-    <link href="Fonts/Kodchasan/Kodchasan-Regular.ttf" />
+    <link href="Fonts/Kodchasan/Kodchasan-Regular.ttf" rel="stylesheet"/>
 </head>
 
 <body>
     <header id="header">
-        <div class="">
-            <div id="titulo_pagina">Admin</div>
-
-            <nav class="menu" data-animation="center">
-                <a href="Inicio.aspx" id="link_inicio" class="">Inicio</a>
-                <a href="" id="link_">Pagina</a>
-                <a href="" id="link_">Pagina</a>
-                <a href="" id="link_">Pagina</a>
-                <a href="" id="link_">Pagina</a>
-                <a href="Ajustes.aspx" id="link_ajustes">Ajustes</a>
-
-                <a href="Admin.aspx" id="link_admin" class="<%if (!_admin) { Response.Write("hidden"); }%>">Admin</a>
-
-            </nav>
-        </div>
-    </header>
+			<div class="">
+				<div id="titulo_pagina">Admin</div>
+				<nav class="menu" data-animation="center">
+					<a href="Inicio.aspx" id="link_inicio" class="">Inicio</a>
+					<a href="Ajustes.aspx" id="link_ajustes">Ajustes</a>
+					<a href="Admin.aspx" id="link_admin" class="<%if (!_admin) { Response.Write("hidden"); }%>">Admin</a>
+				</nav>
+			</div>
+		</header>
 
     <div class="div-cuerpo">
         <div class="caja_Default informacion">
@@ -142,8 +136,8 @@
                  <input type="text" name="in_img" value="" id="in_img"  placeholder="Inserta URL de una imagen" autocomplete="off" class="input_form" />
 
                 <div class="caja-padre">
-                    <input type="submit" value="Agregar" class="btn_submit_popup btn-cuenta-nueva" id="AgregarJuego">
-                    <input type="button" class="btn_submit_popup btn-color-rojo" value="Cancelar" id="CancelarJuego">
+                    <input type="submit" value="Agregar" class="btn_submit_popup btn-cuenta-nueva" id="AgregarJuego"/>
+                    <input type="button" class="btn_submit_popup btn-color-rojo" value="Cancelar" id="CancelarJuego"/>
                 </div>
 
             </form>
@@ -161,8 +155,8 @@
 
 
                 <div class="caja-padre">
-                    <input type="submit" value="Agregar" class="btn_submit_popup btn-cuenta-nueva" id="AgregarGenero">
-                    <input type="button" class="btn_submit_popup btn-color-rojo" value="Cancelar" id="CancelarGenero">
+                    <input type="submit" value="Agregar" class="btn_submit_popup btn-cuenta-nueva" id="AgregarGenero"/>
+                    <input type="button" class="btn_submit_popup btn-color-rojo" value="Cancelar" id="CancelarGenero"/>
                 </div>
             </form>
         </div>
@@ -182,8 +176,8 @@
 
 
                 <div class="caja-padre">
-                    <input type="submit" value="Agregar" class="btn_submit_popup btn-cuenta-nueva" id="AgregarCategoria">
-                    <input type="button" class="btn_submit_popup btn-color-rojo" value="Cancelar" id="cancelarCategoria">
+                    <input type="submit" value="Agregar" class="btn_submit_popup btn-cuenta-nueva" id="AgregarCategoria"/>
+                    <input type="button" class="btn_submit_popup btn-color-rojo" value="Cancelar" id="cancelarCategoria"/>
                 </div>
             </form>
         </div>
@@ -203,8 +197,8 @@
                 <input type="text" name="in_publisher" value="" id="in_publisher" placeholder="Nombre del Publisher (opcional)" autocomplete="off" class="input_form" required="required" />
 
                 <div class="caja-padre">
-                    <input type="submit" value="Agregar" class="btn_submit_popup btn-cuenta-nueva" id="AgregarDesarrolladora">
-                    <input type="button" class="btn_submit_popup btn-color-rojo" value="Cancelar" id="cancelarDesarrolladora">
+                    <input type="submit" value="Agregar" class="btn_submit_popup btn-cuenta-nueva" id="AgregarDesarrolladora"/>
+                    <input type="button" class="btn_submit_popup btn-color-rojo" value="Cancelar" id="cancelarDesarrolladora"/>
                 </div>
             </form>
         </div>

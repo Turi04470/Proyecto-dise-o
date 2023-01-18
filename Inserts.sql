@@ -50,56 +50,32 @@ FROM game
 	INNER JOIN genero ON genero.id_genero=juego_genero.id_genero
 
 
-	SELECT 
-	game.id_juego,
-	game.titulo,
-	desarrolladora.nombre as desarrolladora,
-	game.lanzamiento, 
-	categoria.nombre as categoria,
-	plataforma.nombre as plataforma,
-	idioma.nombre as idioma,
-	game.img as urlIMG
-	
-FROM game	
-	INNER JOIN desarrolladora ON desarrolladora.id_desarrolladora=game.id_desarrolladora
-	INNER JOIN categoria ON categoria.id_categoria=game.id_categoria
-	INNER JOIN plataforma ON plataforma.id_plataforma=GAME.id_plataforma
-	INNER JOIN idioma ON idioma.id_idioma=game.id_idioma
-WHERE game.id_juego=1
-	
-	select * from computadora
-	delete from computadora
 
 
-SELECT 
-	game.id_juego,
-	game.titulo,
-	categoria.nombre as categoria,
-	game.img as urlIMG
-FROM game
-	INNER JOIN categoria ON categoria.id_categoria=game.id_categoria
-
-	
-	select * from game
-	delete from computadora
-
-	select id_juego from requeriemientos where id_juego=1
 
 
-delete from game where id_juego=8
 
-select * from no_favoritos 
-
-select * from favoritos
-INNER JOIN game on game.id_juego=favoritos.id_juego
-
-SELECT 
-	game.id_juego,
-	game.titulo,
-	categoria.nombre as categoria,
-	game.img as urlIMG
-FROM game
+--Consulta para favoritos de un usuario
+SELECT game.id_juego,game.titulo,categoria.nombre as categoria,game.img as urlIMG FROM game
 INNER JOIN categoria ON categoria.id_categoria=game.id_categoria
+INNER JOIN no_favoritos ON no_favoritos.id_juego=game.id_juego
+WHERE no_favoritos.id_user=1
+
+
+--para las de el año
+SELECT game.id_juego,game.titulo,categoria.nombre as categoria,game.img as urlIMG FROM game
+INNER JOIN categoria ON categoria.id_categoria=game.id_categoria
+WHERE game.lanzamiento BETWEEN DATEFROMPARTS(2022,1,1) and DATEFROMPARTS(2022,12,31)
+
+--consulta defualt
+SELECT game.id_juego,game.titulo,categoria.nombre as categoria,game.img as urlIMG FROM game
+INNER JOIN categoria ON categoria.id_categoria=game.id_categoria
+
+--pata la pltaforma
+
+
+
+
 
 
 
