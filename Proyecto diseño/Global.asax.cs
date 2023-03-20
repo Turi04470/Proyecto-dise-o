@@ -65,7 +65,7 @@ namespace Proyecto_diseño
 
         protected void Session_End(object sender, EventArgs e)
         {
-            Application["SesionesUsuario"] = (int)Application["SesionesUsuario"] - 1;
+           // Application["SesionesUsuario"] = (int)Application["SesionesUsuario"] - 1;
         }
 
         protected void Application_End(object sender, EventArgs e)

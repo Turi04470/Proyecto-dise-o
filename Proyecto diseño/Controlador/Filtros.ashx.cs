@@ -8,7 +8,7 @@ namespace Proyecto_diseño.Controlador
     /// <summary>
     /// Descripción breve de Handler2
     /// </summary>
-    public class Handler2 : IHttpHandler
+    public class Filtros : IHttpHandler
     {
 
         public void ProcessRequest(HttpContext context)
