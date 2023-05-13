@@ -5,7 +5,10 @@ var btn_iniciar = document.getElementById('iniciar');
 var correo_login = document.getElementById('correo_login');
 var pass_login = document.getElementById('pass_login');
 var btn_cuenta_n = document.getElementById('btn_crear_cuenta');
-
+var OK = document.getElementById('OK');
+var overlaySesion = document.getElementById('overlaySesion');
+var OK_R = document.getElementById('OK_R');
+var overlayRExito = document.getElementById('overlayRExito');
 /*var btn_recuperar_cuenta = document.getElementById('btn_recuperar_cuenta');*/
 
 
@@ -50,3 +53,12 @@ pass_login.addEventListener("keyup", function () {
 
 
 
+
+OK.addEventListener('click', function () {
+    overlaySesion.classList.add("oculto");
+
+});
+OK_R.addEventListener('click', function () {
+    overlayRExito.classList.add("oculto");
+
+});
