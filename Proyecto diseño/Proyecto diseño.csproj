@@ -66,8 +66,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CSS\Detalle_Juego.css" />
+    <Content Include="JS\Detalle_Juego.js" />
     <Content Include="JS\jquery-latest.js" />
     <Content Include="WEB Services\Detalle_Juego.asmx" />
+    <Content Include="WEB\Juego_Detalle.aspx" />
     <Content Include="CSS\Admin.css" />
     <Content Include="CSS\Ajustes.css" />
     <Content Include="CSS\Animaciones.css" />
@@ -81,16 +83,26 @@
     <Content Include="Fonts\Kodchasan\OFL.txt" />
     <Content Include="Global.asax" />
     <Content Include="Index.aspx" />
+    <Content Include="JS\Admin.js" />
+    <Content Include="JS\Ajustes.js" />
+    <Content Include="JS\Genesis.js" />
     <Content Include="JS\header.js" />
     <Content Include="JS\Index.js" />
     <Content Include="JS\Inicio.js" />
     <Content Include="JS\JQuery.js" />
+    <Content Include="JS\Registro.js" />
+    <Content Include="Media\IMG\default_game.jpg" />
     <Content Include="WEB Services\Admin.asmx" />
     <Content Include="WEB Services\Ajustes.asmx" />
     <Content Include="WEB Services\Inicio.asmx" />
     <Content Include="Web.config" />
     <Content Include="WEB\404.html" />
+    <Content Include="WEB\Admin.aspx" />
+    <Content Include="WEB\Admin.html" />
     <Content Include="WEB\Inicio.aspx" />
+    <Content Include="WEB\Registro.aspx" />
+    <Content Include="WEB\Registro.html" />
+    <Content Include="WEB\Ajustes.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion.cs" />
@@ -109,6 +121,13 @@
     <Compile Include="WEB Services\Detalle_Juego.asmx.cs">
       <DependentUpon>Detalle_Juego.asmx</DependentUpon>
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WEB\Juego_Detalle.aspx.cs">
+      <DependentUpon>Juego_Detalle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WEB\Juego_Detalle.aspx.designer.cs">
+      <DependentUpon>Juego_Detalle.aspx</DependentUpon>
     </Compile>
     <Compile Include="Objetos\Computadora.cs" />
     <Compile Include="Objetos\Estadisticas.cs" />
@@ -170,12 +189,33 @@
       <DependentUpon>Inicio.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="WEB\Admin.aspx.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WEB\Admin.aspx.designer.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+    </Compile>
     <Compile Include="WEB\Inicio.aspx.cs">
       <DependentUpon>Inicio.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="WEB\Inicio.aspx.designer.cs">
       <DependentUpon>Inicio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WEB\Registro.aspx.cs">
+      <DependentUpon>Registro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WEB\Registro.aspx.designer.cs">
+      <DependentUpon>Registro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WEB\Ajustes.aspx.cs">
+      <DependentUpon>Ajustes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WEB\Ajustes.aspx.designer.cs">
+      <DependentUpon>Ajustes.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -214,9 +254,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Media\IMG\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
