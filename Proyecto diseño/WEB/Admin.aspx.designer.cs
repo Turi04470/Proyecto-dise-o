@@ -11,61 +11,88 @@ namespace Proyecto_diseño.WEB
 {
 
 
-    public partial class Inicio
+    public partial class Admin
     {
 
         /// <summary>
-        /// Control year.
+        /// Control form_juego.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList year;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form_juego;
 
         /// <summary>
-        /// Control SqlData_Year.
+        /// Control in_desarrolladora_juego.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlData_Year;
+        protected global::System.Web.UI.WebControls.DropDownList in_desarrolladora_juego;
 
         /// <summary>
-        /// Control categoria.
+        /// Control select_desarrolladora.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList categoria;
+        protected global::System.Web.UI.WebControls.SqlDataSource select_desarrolladora;
 
         /// <summary>
-        /// Control SqlData_categoria.
+        /// Control in_categoria_juego.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlData_categoria;
+        protected global::System.Web.UI.WebControls.DropDownList in_categoria_juego;
 
         /// <summary>
-        /// Control plataforma.
+        /// Control select_categoria.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList plataforma;
+        protected global::System.Web.UI.WebControls.SqlDataSource select_categoria;
 
         /// <summary>
-        /// Control SqlData_plataforma.
+        /// Control in_plataforma.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlData_plataforma;
+        protected global::System.Web.UI.WebControls.DropDownList in_plataforma;
+
+        /// <summary>
+        /// Control lista_plataforma.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource lista_plataforma;
+
+        /// <summary>
+        /// Control in_idioma.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList in_idioma;
+
+        /// <summary>
+        /// Control lista_idioma.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource lista_idioma;
     }
 }

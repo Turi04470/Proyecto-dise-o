@@ -1,0 +1,130 @@
+
+
+.titulos {
+	font-size: 20px;	
+   
+	text-align: center;
+	font-weight: 600;
+	margin-bottom: 10px;
+	margin: auto 10px;
+}
+
+	.titulos + svg {
+		margin: auto;
+		transform: scale(1.5);
+		cursor: pointer;
+	}
+
+#administrador_icon {
+	cursor: pointer;
+}
+
+.caja_Default + .juego,.categoria,.genero,.desarrolladora{
+	display: grid;
+	grid-template-columns: 170px auto;
+	
+	
+	
+}
+
+
+.informacion {
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 1;
+	grid-row-end:5;
+	
+	
+}
+
+
+
+.genero {
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 2;
+	grid-row-end:3;
+	margin: 25px 50px 25px 50px;
+}
+
+.juego {
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 1;
+	grid-row-end:2;
+	margin: 0px 50px 25px 50px;
+}
+
+.desarrolladora {
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 4;
+	grid-row-end:5;
+	margin: 25px 50px 0px 50px;
+}
+
+.administrador{
+	grid-column-start: 3;
+	grid-column-end: 4;
+	grid-row-start: 2;
+	grid-row-end:4;
+	max-width: 180px;
+	margin: 80px 20px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.categoria{
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 3;
+	grid-row-end:4;
+	margin: 25px 50px 25px 50px;
+}
+
+
+#game_icon {
+	fill:rgba(161,0,177,1.00);
+	
+	
+}
+
+#categoria_icon {
+	fill: rgba(248,255,11,1.00);
+	
+}
+
+#administrador_icon {
+	fill: rgba(0,226,229,1.00);
+	
+}
+
+#desarrolladora_icon {
+	fill: rgba(138,221,86,1.00);
+	
+}
+
+#genero_icon {
+	fill: rgba(224,0,3,1.00);
+	
+}
+
+.informacion .detalles {
+	margin-top: 20px;
+	display: grid;
+	grid-template-columns: 50px auto;
+}
+
+#newAdmin{
+
+}
+
+.hidden {
+	display: none;
+	visibility: hidden;
+}
